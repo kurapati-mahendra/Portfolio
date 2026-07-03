@@ -783,8 +783,8 @@ background:#FC1961;
     .home {
         height: 100vh;
         min-height: 650px;
-        background-size: cover;
-        background-position: 85% bottom;
+        background-size: contain;
+        background-position: center bottom;
         background-attachment: scroll;
         display: flex;
         flex-direction: column;
