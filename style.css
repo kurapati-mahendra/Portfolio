@@ -726,6 +726,15 @@ background:#FC1961;
 
 @media (max-width: 768px) {
 
+    html, body {
+        overflow-x: hidden;
+        width: 100%;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
     /* --- Navbar --- */
     .navbar {
         width: 90%;
@@ -772,16 +781,19 @@ background:#FC1961;
 
     /* --- Home --- */
     .home {
-        height: auto;
-        min-height: 100vh;
-        background-size: cover;
+        height: 100vh;
+        min-height: 650px;
+        background-size: contain;
         background-position: bottom center;
         background-attachment: scroll;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
     }
 
     .content {
         position: static;
-        padding: 140px 20px 60px;
+        padding: 130px 20px 0;
         text-align: center;
     }
 
@@ -817,6 +829,18 @@ background:#FC1961;
         padding: 60px 5%;
     }
 
+    .skills-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skill-box {
+        width: 100%;
+        max-width: 400px;
+        margin-bottom: 20px;
+    }
+
     /* --- Stats --- */
     #stats {
         padding: 60px 5%;
@@ -836,6 +860,11 @@ background:#FC1961;
         max-width: 400px;
         box-sizing: border-box;
         margin-bottom: 20px;
+    }
+
+    .card h2 {
+        font-size: 26px;
+        word-wrap: break-word;
     }
 
     /* --- Sections general --- */
