@@ -110,7 +110,7 @@ function updateTotal() {
 const leetcode =
 "mahendra_kurapati";
 
-fetch(`https://alfa-leetcode-api.onrender.com/userProfile/${leetcode}`)
+fetch(`https://leetcode-api-faisalshohag.vercel.app/${leetcode}`)
 .then(res => res.json())
 .then(data => {
 
