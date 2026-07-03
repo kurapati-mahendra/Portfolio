@@ -713,62 +713,167 @@ background:#FC1961;
 
 }
 
-/* Responsive */
+/* Menu icon - hidden on desktop */
+
+.menu-icon {
+    display: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* ========== RESPONSIVE - MOBILE ONLY ========== */
 
 @media (max-width: 768px) {
 
-    .navbar{
-        width:95%;
-        margin:10px auto;
-        padding:15px;
+    /* --- Navbar --- */
+    .navbar {
+        width: 90%;
+        margin: 10px auto;
+        padding: 15px 20px;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        box-sizing: border-box;
     }
 
-    .navbar li{
-        display:block;
-        margin:10px 0;
-        text-align:center;
+    .logo {
+        width: 120px;
     }
 
-    .content{
-        position:static;
-        padding:120px 20px 40px;
-        text-align:center;
+    .menu-icon {
+        display: block;
     }
 
-    .home{
-        background:none;
+    .navbar ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 15px;
+        padding: 0;
     }
 
-    #about{
-        display:block;
-        text-align:center;
+    .navbar ul.show {
+        display: flex;
     }
 
-    #about img{
-        width:220px;
-        height:auto;
-        margin:20px auto;
-        display:block;
+    .navbar li {
+        display: block;
+        margin: 10px 0;
+        text-align: center;
     }
 
-    .skills-container,
-    .stats-container,
-    #contact{
-        display:block;
+    .navbar a {
+        font-size: 18px;
     }
 
-    .skill-box,
-    .card{
-        width:100%;
-        margin-bottom:20px;
+    /* --- Home --- */
+    .home {
+        height: auto;
+        min-height: 100vh;
+        background-size: cover;
+        background-position: bottom center;
+        background-attachment: scroll;
     }
 
-    .contact-right{
-        min-width:100%;
+    .content {
+        position: static;
+        padding: 140px 20px 60px;
+        text-align: center;
     }
 
-    button{
-        width:100%;
+    .home h1 {
+        font-size: 32px;
+    }
+
+    .home p {
+        font-size: 18px;
+    }
+
+    /* --- About --- */
+    #about {
+        display: block;
+        text-align: center;
+        padding: 60px 5%;
+    }
+
+    #about img {
+        width: 100%;
+        max-width: 250px;
+        height: auto;
+        margin: 20px auto;
+        display: block;
+    }
+
+    #about p {
+        font-size: 1rem;
+    }
+
+    /* --- Skills --- */
+    #skills {
+        padding: 60px 5%;
+    }
+
+    /* --- Stats --- */
+    #stats {
+        padding: 60px 5%;
+    }
+
+    .total-problems h1 {
+        font-size: 45px;
+    }
+
+    .stats-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 400px;
+        box-sizing: border-box;
+        margin-bottom: 20px;
+    }
+
+    /* --- Sections general --- */
+    .section {
+        padding: 50px 5%;
+    }
+
+    /* --- Contact --- */
+    #contact {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        padding: 60px 5%;
+    }
+
+    .contact-left {
+        min-width: 100%;
+        text-align: center;
+    }
+
+    .contact-right {
+        min-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .social {
+        justify-content: center;
+    }
+
+    form input,
+    form textarea {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    button {
+        width: 100%;
+        box-sizing: border-box;
     }
 
 }

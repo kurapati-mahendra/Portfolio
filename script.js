@@ -277,3 +277,21 @@ form.addEventListener("submit", async function (e) {
     }, 4000);
 
 });
+
+/* Mobile Menu Toggle */
+
+const menuIcon = document.getElementById("menuIcon");
+const navUl = document.querySelector(".navbar ul");
+
+if (menuIcon && navUl) {
+    menuIcon.addEventListener("click", () => {
+        navUl.classList.toggle("show");
+    });
+
+    // Close menu when a nav link is clicked
+    navLinks.forEach(link => {
+        link.addEventListener("click", () => {
+            navUl.classList.remove("show");
+        });
+    });
+}
