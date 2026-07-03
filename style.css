@@ -783,8 +783,8 @@ background:#FC1961;
     .home {
         height: 100vh;
         min-height: 650px;
-        background-size: contain;
-        background-position: bottom center;
+        background-size: cover;
+        background-position: 85% bottom;
         background-attachment: scroll;
         display: flex;
         flex-direction: column;
@@ -860,11 +860,14 @@ background:#FC1961;
         max-width: 400px;
         box-sizing: border-box;
         margin-bottom: 20px;
+        text-align: center;
     }
 
     .card h2 {
         font-size: 26px;
         word-wrap: break-word;
+        text-align: center;
+        width: 100%;
     }
 
     /* --- Sections general --- */
