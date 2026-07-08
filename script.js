@@ -220,10 +220,28 @@ loadStats();
 
 
 const form = document.getElementById("contactForm");
-
 const statusMessage = document.getElementById("statusMessage");
-
 const submitBtn = document.getElementById("submitBtn");
+const toastContainer = document.getElementById("toastContainer");
+
+function showToast(message, type = "success") {
+    if (!toastContainer) return;
+
+    const toast = document.createElement("div");
+    toast.className = `toast ${type}`;
+    toast.textContent = message;
+
+    toastContainer.appendChild(toast);
+
+    setTimeout(() => {
+        toast.style.opacity = "0";
+        toast.style.transform = "translateY(20px)";
+    }, 2500);
+
+    setTimeout(() => {
+        toast.remove();
+    }, 3200);
+}
 
 form.addEventListener("submit", async function (e) {
 
@@ -255,6 +273,7 @@ form.addEventListener("submit", async function (e) {
             "✅ Thank you! Your message has been sent successfully.";
 
         statusMessage.classList.add("success");
+        showToast("Thank you! Your message has been sent successfully.", "success");
 
         form.reset();
 
@@ -264,6 +283,7 @@ form.addEventListener("submit", async function (e) {
             "❌ Something went wrong. Please try again.";
 
         statusMessage.classList.add("error");
+        showToast("Something went wrong. Please try again.", "error");
     }
 
     submitBtn.disabled = false;
@@ -277,6 +297,22 @@ form.addEventListener("submit", async function (e) {
     }, 4000);
 
 });
+
+const resumeDownloadBtn = document.getElementById("resumeDownloadBtn");
+
+if (resumeDownloadBtn) {
+    resumeDownloadBtn.addEventListener("click", function (e) {
+        e.preventDefault();
+
+        showToast("Resume download started.", "success");
+
+        const link = this;
+
+        setTimeout(() => {
+            window.location.href = link.href;
+        }, 500);
+    });
+}
 
 /* Mobile Menu Toggle */
 
