@@ -98,7 +98,7 @@ typeEffect();
 
 let lcSolved = 0;
 let cfSolved = 0;
-const gfgSolved = 50;
+const gfgSolved = 121;
 
 function updateTotal() {
     document.getElementById("totalSolved").textContent =
